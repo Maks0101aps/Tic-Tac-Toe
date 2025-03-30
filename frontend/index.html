@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Online - Notebook Edition</title>
+    <!-- Подключаем рукописные шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <!-- Фавиконка тетрадки -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+    <meta name="theme-color" content="#fff8e8">
+  </head>
+  <body>
+    <div id="app" class="container">
+      <!-- App content will be loaded here -->
+      <div id="loading" class="flex justify-center items-center h-screen">
+        <div class="text-2xl pencil-text">
+          Loading<span class="dots">...</span>
+          <style>
+            @keyframes dots {
+              0%, 20% { content: '.'; }
+              40% { content: '..'; }
+              60% { content: '...'; }
+              80%, 100% { content: ''; }
+            }
+            .dots::after {
+              content: '';
+              animation: dots 1.5s infinite;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>
